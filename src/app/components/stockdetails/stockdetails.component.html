@@ -1,0 +1,15 @@
+<div>
+    <mat-card>
+        <mat-card-content>
+            <h1>{{stockDetails.name}}</h1>
+            <div class="symbol-container">
+                <p class="symbol">{{stockDetails.symbol}}</p> &nbsp;<span>{{stockDetails.exchange}}</span>
+            </div>
+            <p>{{stockDetails.currency}}</p>
+            <p>{{stockDetails.type}}</p>
+        </mat-card-content>
+        <ag-charts 
+        [options]="results"
+    ></ag-charts>
+    </mat-card>
+</div>

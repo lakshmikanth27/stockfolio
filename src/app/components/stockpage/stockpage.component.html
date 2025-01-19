@@ -1,1 +1,24 @@
-<p>stockpage works!</p>
+<div class="search-container">
+    <mat-form-field appearance="fill">
+        <mat-label>Search for Stock with Symbol</mat-label>
+        <input matInput [formControl]="searchControl" placeholder="Search...">
+    </mat-form-field>
+  
+    <div *ngIf="isLoading" class="spinner">
+      <mat-spinner diameter="30"></mat-spinner>
+    </div>
+  
+    <mat-card>
+        <mat-list role="list" *ngIf="searchResults.length">
+            <mat-card-content>
+                <mat-list-item style="cursor:pointer" role="listitem" 
+                    *ngFor="let item of searchResults" 
+                    (click)="getStockResults(item.symbol, item.exchange, item.name)">
+                        <span>{{ item.name }}</span>
+                        <span style="color: #696969; float:right">{{item.type}} - {{item.exchange}}</span></mat-list-item>
+            </mat-card-content>
+        </mat-list>
+    
+        <p *ngIf="!isLoading && searchResults.length === 0" style="margin: 10px;">No results found.</p>
+    </mat-card>
+  </div>

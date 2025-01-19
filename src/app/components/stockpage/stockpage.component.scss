@@ -1,0 +1,36 @@
+#section-container {
+    display: flex;
+    height: 100vh;
+}
+
+table {
+  width: 100%;
+}
+
+.mat-mdc-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+td,
+th {
+  width: 25%;
+}
+th {
+  font-weight: bold;
+}
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.filters {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  height: 40%;
+  margin-right: 10px;
+}
+

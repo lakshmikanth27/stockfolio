@@ -1,0 +1,20 @@
+ag-charts {
+    display: block;
+    height: 500px;
+    width: 100%;
+  }
+
+
+.symbol {
+border: 1px solid #dadee7;
+background: #dadee7;
+font-weight: 600;
+border-radius: 8px;
+padding: 0 10px;
+text-align: center;
+}
+
+.symbol-container {
+    display: flex;
+    align-items: center;
+}
