@@ -30,20 +30,15 @@ export class StockdetailsComponent implements OnInit  {
   
   subscribeStockDetails(symbol: string, exchange: string, name: string) {
     this.stockSRV.getStockDetails(symbol, exchange).subscribe((data: any) => {
+      const stockPrice = data.values[0].close;
       this.stockDetails = 
-      {name, ...data.meta};
-      console.log(this.stockDetails);
+      {name, stockPrice, ...data.meta,};
+      console.log(stockPrice);
 
       const stockResults = data.values.map((item: any) => ({
         datetime: item.datetime, 
         close: parseFloat(item.close), 
-        open: parseFloat(item.open),
-      })).sort((time1: any, time2: any) => {
-        // Convert datetime to Date objects and compare
-        const dateA = new Date(time1.datetime).getTime();
-        const dateB = new Date(time2.datetime).getTime();
-        return dateA - dateB; // Ascending order
-      });
+      }))
       this.results = {
         title: {
           text: 'Stock Price Movement',

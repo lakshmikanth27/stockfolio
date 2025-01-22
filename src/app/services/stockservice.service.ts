@@ -25,7 +25,8 @@ export class StockserviceService {
     if (!symbol.trim()) {
       return of([]);
     }
-    return this.http.get<any[]>(`${this.apiUrl}time_series?apikey=${this.api_key}&interval=1h&symbol=${symbol}&exchange=${exchange}&outputsize=50&dp=1`)
+    return this.http.get<any[]>(`
+      ${this.apiUrl}time_series?apikey=${this.api_key}&interval=1day&symbol=${symbol}&exchange=${exchange}&outputsize=50&dp=2&previous_close=true`)
     .pipe(catchError(this.handleError<any[]>('results', [])))
   }
 
@@ -34,5 +35,11 @@ export class StockserviceService {
       console.error(`${operation} failed: ${error.message}`);
       return of(result as T);
     };
+  }
+
+  getListedStocks(): Observable<any[]> {
+    return this.http.get<any[]>('/utils/stocks.json').pipe(
+      catchError(this.handleError<any[]>('search', []))
+    );
   }
 }

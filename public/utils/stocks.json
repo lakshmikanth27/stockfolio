@@ -1,0 +1,114 @@
+{
+  "data": [
+    {
+      "symbol": "A", 
+      "name": "Agilent Technologies, Inc.",
+      "currency": "USD",
+      "exchange": "NYSE",
+      "mic_code": "XNYS",
+      "country": "United States",
+      "type": "Common Stock",
+      "figi_code": "BBG000C2V541",
+      "price": 151.18
+    },
+    {
+      "symbol": "AA",
+      "name": "Alcoa Corp",
+      "currency": "USD",
+      "exchange": "NYSE",
+      "mic_code": "XNYS",
+      "country": "United States",
+      "type": "Common Stock",
+      "figi_code": "BBG00B3T3HK5",
+      "price": 39.16
+    },
+    {
+      "symbol": "AAALY",
+      "name": "Aareal Bank AG",
+      "currency": "USD",
+      "exchange": "OTC",
+      "mic_code": "PINX",
+      "country": "United States",
+      "type": "American Depositary Receipt",
+      "figi_code": "",
+      "price": 34.65
+    },
+    {
+      "symbol": "AABB",
+      "name": "Asia Broadband, Inc.",
+      "currency": "USD",
+      "exchange": "OTC",
+      "mic_code": "PINX",
+      "country": "United States",
+      "type": "Common Stock",
+      "figi_code": "BBG000CWQ337",
+      "price": 0.03
+    },
+    {
+      "symbol": "AABVF",
+      "name": "Aberdeen International Inc.",
+      "currency": "USD",
+      "exchange": "OTC",
+      "mic_code": "PINX",
+      "country": "United States",
+      "type": "Common Stock",
+      "figi_code": "BBG000BXKQW9",
+      "price": 0.02
+    },
+    {
+      "symbol": "AACAF",
+      "name": "AAC Technologies Holdings Inc",
+      "currency": "USD",
+      "exchange": "OTC",
+      "mic_code": "PINX",
+      "country": "United States",
+      "type": "Common Stock",
+      "figi_code": "BBG000C3S8L8",
+      "price": 4.62
+    },
+    {
+      "symbol": "AACAY",
+      "name": "AAC Technologies Holdings Inc",
+      "currency": "USD",
+      "exchange": "OTC",
+      "mic_code": "PINX",
+      "country": "United States",
+      "type": "American Depositary Receipt",
+      "figi_code": "BBG000VNTFR0",
+      "price": 4.62
+    },
+    {
+      "symbol": "AACG",
+      "name": "ATA Creativity Global",
+      "currency": "USD",
+      "exchange": "NASDAQ",
+      "mic_code": "XNMS",
+      "country": "United States",
+      "type": "Depositary Receipt",
+      "figi_code": "BBG000V2S606",
+      "price": 0.95
+    },
+    {
+      "symbol": "AACT",
+      "name": "Ares Acquisition Corporation II Class A Ordinary Shares",
+      "currency": "USD",
+      "exchange": "NYSE",
+      "mic_code": "XNYS",
+      "country": "United States",
+      "type": "Common Stock",
+      "figi_code": "BBG01GWQM2M7",
+      "price": 10.95
+    },
+    {
+      "symbol": "AADI",
+      "name": "Aadi Bioscience, Inc.",
+      "currency": "USD",
+      "exchange": "NASDAQ",
+      "mic_code": "XNCM",
+      "country": "United States",
+      "type": "Common Stock",
+      "figi_code": "BBG00HDDFQ50",
+      "price": 3.00
+    }
+  ]
+}

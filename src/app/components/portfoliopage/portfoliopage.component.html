@@ -1,1 +1,45 @@
-<p>portfoliopage works!</p>
+<mat-card>
+    <mat-card-content>
+        <h1>Portfolio Stocks</h1>
+        <ag-grid-angular
+          [rowData]="rowData"
+          [columnDefs]="colDefs"
+          [defaultColDef]="defaultColDef"
+          (cellValueChanged)="onCellValueChanged($event)"
+          (gridReady)="onGridReady($event)"
+        />
+            <h2>Add your Stocks here. </h2>
+        <form [formGroup]="stockForm" (ngSubmit)="addStock()">
+                <mat-form-field appearance="outline">
+                    <mat-label>Symbol</mat-label>
+                    <input matInput placeholder="Stock Symbol" formControlName="stockSymbol">
+                    <mat-error *ngIf="stockForm.get('stockSymbol')?.invalid && stockForm.get('stockSymbol')?.touched">
+                        Symbol is required.
+                      </mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="margin-left">
+                    <mat-label>Stock Name</mat-label>
+                    <input matInput placeholder="Stock Symbol" formControlName="stockName">
+                    <mat-error *ngIf="stockForm.get('stockName')?.invalid && stockForm.get('stockName')?.touched">
+                        Stock Name is required.
+                      </mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="margin-left">
+                    <mat-label>Stock Price</mat-label>
+                    <input matInput placeholder="Stock Symbol" formControlName="stockPrice">
+                    <mat-error *ngIf="stockForm.get('stockPrice')?.invalid && stockForm.get('stockPrice')?.touched">
+                        Stock Price is required and should be a number.
+                      </mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="margin-left">
+                    <mat-label>Exchange</mat-label>
+                    <input matInput placeholder="Exchange" formControlName="stockExchange">
+                    <mat-error *ngIf="stockForm.get('stockExchange')?.invalid && stockForm.get('stockExchange')?.touched">
+                        Exchange is required.
+                      </mat-error>
+                </mat-form-field>
+                <button mat-stroked-button color="accent" class="margin-left">Add the Stock</button>
+            </form>
+
+    </mat-card-content>
+</mat-card>
